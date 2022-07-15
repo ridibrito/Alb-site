@@ -1,36 +1,36 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import  MyDropdown  from './/mydropdown'
 
 export default function Navbar() {
   return (
     <>
-      <div className="flex justify-between p-4 shadow-sm items-center">
-        <Image src="/logofull.png" alt="logo alb" width="100" height="60" />
+      <div className="max-w-screen flex justify-around p-2  bg-white shadow-md items-center">
+        <Image src="/logofull.png" alt="logo alb" width="160" height="80" />
         <div>
           <ul className="flex">
             <Link href="/">
               <a>
-                <li className="text-gray-500 font-semibold">Home</li>
+                <li className="text-gray-700 font-semibold hover:text-blue-500 duration-500">Home</li>
               </a>
             </Link>
 
-            <Link href="/">
+            <Link href="/precos">
               <a>
-                <li className="text-gray-500 font-semibold ml-5">Produtos</li>
+                <li className="text-gray-700 font-semibold ml-5 hover:text-blue-500">Preços</li>
               </a>
             </Link>
 
-            <Link href="/">
+            <Link href="/blog">
               <a>
-                <li className="text-gray-500 font-semibold ml-5">Preços</li>
+                <li className="text-gray-700 font-semibold ml-5 hover:text-blue-500">Blog</li>
               </a>
             </Link>
 
-            <Link href="/">
-              <a>
-                <li className="text-gray-500 font-semibold ml-5">Contato</li>
-              </a>
-            </Link>
+            <Link href="#">
+              <a> <MyDropdown /></a>
+            </Link>  
+           
           </ul>
         </div>
         <div>
@@ -41,7 +41,10 @@ export default function Navbar() {
             Sign Up
           </button>
         </div>
+        
       </div>
+      
+      
     </>
   )
 }
