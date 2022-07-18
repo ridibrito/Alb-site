@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import  MyDropdown  from './/mydropdown'
+import MyDropdown from '../components/mydropdown'
 
 export default function Navbar() {
   return (
@@ -11,26 +11,34 @@ export default function Navbar() {
           <ul className="flex">
             <Link href="/">
               <a>
-                <li className="text-gray-700 font-semibold hover:text-blue-500 duration-500">Home</li>
+                <li className="text-gray-700 font-semibold hover:text-blue-500 duration-500">
+                  Home
+                </li>
               </a>
             </Link>
 
             <Link href="/precos">
               <a>
-                <li className="text-gray-700 font-semibold ml-5 hover:text-blue-500">Preços</li>
+                <li className="text-gray-700 font-semibold ml-5 hover:text-blue-500">
+                  Preços
+                </li>
               </a>
             </Link>
 
             <Link href="/blog">
               <a>
-                <li className="text-gray-700 font-semibold ml-5 hover:text-blue-500">Blog</li>
+                <li className="text-gray-700 font-semibold ml-5 hover:text-blue-500">
+                  Blog
+                </li>
               </a>
             </Link>
 
             <Link href="#">
-              <a> <MyDropdown /></a>
-            </Link>  
-           
+              <a>
+                {' '}
+                <MyDropdown />
+              </a>
+            </Link>
           </ul>
         </div>
         <div>
@@ -41,10 +49,7 @@ export default function Navbar() {
             Sign Up
           </button>
         </div>
-        
       </div>
-      
-      
     </>
   )
 }

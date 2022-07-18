@@ -1,11 +1,12 @@
-import Navbar from "./components/navbar";
+import Navbar from '../components/navbar'
+
 
 
 export default function Produtos() {
   return(
     <>
     <Navbar />
-     <h1>Página de produtos</h1>
+     <h1>Página de blog</h1>
   
      </>
   )

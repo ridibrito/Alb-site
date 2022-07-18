@@ -1,6 +1,6 @@
-import Navbar from './components/navbar'
-import Header from './components/header'
-import MyTabs from './components/tabs'
+import Navbar from '../components/navbar'
+import Header from '../components/header'
+import MyTabs from '../components/tabs'
 
 export default function Home() {
   return (
